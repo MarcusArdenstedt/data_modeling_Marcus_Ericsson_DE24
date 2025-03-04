@@ -1,0 +1,2 @@
+# data_modeling_Marcus_Ericsson_DE24
+learning data modeling
