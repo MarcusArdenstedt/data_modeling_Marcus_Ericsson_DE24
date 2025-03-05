@@ -56,3 +56,18 @@ LEFT JOIN staging.hospital_department hd2 ON hd.hospital_id = hd2.hospital_id
 LEFT JOIN staging.department d2 ON hd2.department_id = d2.department_id;
 
 
+
+--- Get information on Dr Urban Urbanson
+SELECT
+	d.name,
+	h.name,
+	h.address,
+	d2.name,
+FROM 	
+	staging.doctor d 
+LEFT JOIN staging.hospital_doctor hd ON d.doctor_id = hd.doctor_id
+LEFT JOIN staging.hospital h ON hd.hospital_id = h.hospital_id
+LEFT JOIN staging.hospital_department hd2 ON hd.hospital_id = hd2.hospital_id
+LEFT JOIN staging.department d2 ON hd2.department_id = d2.department_id
+WHERE d.name LIKE '%Dr Ur%';
+
