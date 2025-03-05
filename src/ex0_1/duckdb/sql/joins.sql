@@ -42,7 +42,7 @@ LEFT JOIN staging.department d ON hd.department_id = d.department_id
 WHERE h.name LIKE '%Sj%';
 
 
--- Get information on doctor and which hospital and wich department
+-- Get information on doctor and which hospital and which department
 SELECT
 	d.name,
 	h.name,
