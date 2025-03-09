@@ -326,7 +326,7 @@ a)
 
 **Entity**
 - Student, is a person who takes courses tought by a professor. 
-- Course, is the link between the student and the professor.
+- Course, where professor teach and student be taught.
 - Professor, is a person who teaches the course.
 
 **Relationship**
@@ -420,3 +420,34 @@ b) Sketch the conceptual ERD.
 c) Define business rules
 
 ### Solution
+
+a)
+
+**Entitise and attributes**
+
+***customer_name***
+
+- customer_id
+- first_name
+- last_name
+- phone
+- email
+- address
+
+
+***Product***
+
+- product_id
+- name
+- ingredients
+- price
+- amount
+
+***Order_date***
+
+- order_id
+- cumstomer_id
+- product_id
+- start_date
+- delivery_date
+- end_date
