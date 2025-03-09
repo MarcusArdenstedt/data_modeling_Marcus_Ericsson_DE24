@@ -213,7 +213,7 @@ b)
 
 Alternative to put in descriptions into entities directly in conceptual ERD
 
-<img src = "../assets/car_rental_label_ex0_3.png"
+<img src = "../assets/car_rental_conceptual_erd_ex0_3.png"
 width=500>
 
 c)
@@ -225,10 +225,10 @@ Car to Rental (one-to-many)
 
 
 d)
-- A Customer can make one or sevral Rental
-- Rental is linked to one and only one Customer
-- Rental can have one and only one Car
-- A Car can be Rental one or sevral time
+- A Customer can makes one or sevral Rentals over time
+- Each Rental is connected to one Customer
+- Eache Rental is for one Car
+- Each Car can be in sevral rentals
 
 ---
 
@@ -301,3 +301,122 @@ b)
 
 <img src = "../assets/store_conceptual_erd_ex0_4.png"
 width=500>
+
+---
+
+## 5. University management system
+
+A university needs a system to manage students, courses, and professors.
+
+- each student can enroll in multiple courses.
+- each course is taught by one professor.
+- a teacher can teach multiple courses.
+
+a) Identify entities and their relationships
+
+b) Come up with possible attributes for the entities
+
+c) Draw conceptual ERD with cardinalities
+
+d) Define business rules (e.g. a student can enroll in max 4 courses)
+
+### solution
+
+a)
+
+**Entity**
+- Student, is a person who takes courses tought by a professor. 
+- Course, is the link between the student and the professor.
+- Professor, is a person who teaches the course.
+
+**Relationship**
+- Student to Course (one-to-many)
+- Course to Student (zero or many)
+- Course to Professor (one and only one)
+- Professor to Course (one or zero)
+
+**Relationships with composite entity**
+- Student to Enrollment (one or many)
+- Enrollment to Student (zero or one)
+- Enrollment to Course (one-to-many)
+- Course to Enrollment (zero or one)
+- Course to Professor (one and only one)
+- Professor to Course (zero or many)
+
+b)
+
+**Entity and attributes to each entities**
+
+**Student**
+- student_id
+- first_name
+- last_name
+- phone
+- email
+- address
+
+<br>
+
+**Enrollment**
+- enrollment_id
+- student_id
+- course_id
+
+<br>
+
+**Course**
+- course_id
+- name
+- description
+- start
+- end
+
+<br> 
+
+**Professor**
+- professor_id
+- first_name
+- last_name
+- phone
+- email
+- address
+
+c)
+
+**Initial conceptual ERD**
+
+<img src = "../assets/university_conceptual_ex0_5.png"
+width=500>
+
+
+**Elaborate conceptual ERD**
+
+<img src = "../assets/university_conceptual_erd_ex0_5.png" 
+width=500>
+
+d)
+
+``` 
+ALTER TABLE Enrollment
+ADD CONSTRAINT max_courses CHECK (
+  (SELECT COUNT (*) FROM ENROLLMENT WHERE student_id = new_student_id) <= 4
+);
+```
+
+---
+
+## 6. Onshop
+
+An e-commerce platform Onshop manages customers, orders, and products.
+
+- a customer can place multiple orders.
+- each order contains multiple products.
+- a product can belong to multiple categories.
+
+a) Identify key entities and their attributes (e.g., customer_name, order_date)
+
+b) Sketch the conceptual ERD.
+
+c) Define business rules
+
+### Solution
