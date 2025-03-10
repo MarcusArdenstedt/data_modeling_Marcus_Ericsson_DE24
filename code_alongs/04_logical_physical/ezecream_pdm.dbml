@@ -1,0 +1,28 @@
+Table Customer {
+  customer_id INTEGER [primary key]
+  first_name varchar (50) [not null]
+  last_name varchar(50) [not null]
+  personal_number char(12)
+  email varchar(255) [unique, not null]
+  address varchar(100) [not null]
+}
+
+
+Table Order {
+  order_id INTEGER [primary key]
+  customer_id INTEGER [ref: > Customer.customer_id]
+  order_date date [not null]
+}
+
+Table OrderLine {
+  orderline_id integer [primary key]
+  order_id INTEGER [not null, ref: > Order.order_id]
+  product_id integer [not null, ref: > Product.product_id]
+  quantity integer
+}
+
+Table Product {
+  product_id INTEGER [primary key]
+  name varchar(30) [not null]
+  price double [not null]
+}
