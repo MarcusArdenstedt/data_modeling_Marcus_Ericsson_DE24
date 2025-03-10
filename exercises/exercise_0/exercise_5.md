@@ -102,5 +102,5 @@ d)
 
 ***Business rules***
 - a student can enroll in max 4 coursers
-- a professor can teach in max 3 courses
+- a course only have one professor
 - a student must be enrolled in at least 1 course
