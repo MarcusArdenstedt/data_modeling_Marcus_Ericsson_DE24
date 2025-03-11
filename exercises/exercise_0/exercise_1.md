@@ -47,7 +47,7 @@ Department
 
 | department_id | name       | 
 | ------------- | --------   |
-| 1             | Kardioloi  |
+| 1             | Kardiologi | 
 | 2             | Neurologi  |
 | 3             | ortopedi   |
 

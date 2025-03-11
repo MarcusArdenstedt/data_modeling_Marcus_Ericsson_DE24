@@ -53,16 +53,18 @@ FROM
 LEFT JOIN staging.hospital_doctor hd ON d.doctor_id = hd.doctor_id
 LEFT JOIN staging.hospital h ON hd.hospital_id = h.hospital_id
 LEFT JOIN staging.hospital_department hd2 ON hd.hospital_id = hd2.hospital_id
-LEFT JOIN staging.department d2 ON hd2.department_id = d2.department_id;
+LEFT JOIN staging.department d2 ON hd2.department_id = d2.department_id
+WHERE 
+	h.name = 'Sjukhusstock';
 
 
 
 --- Get information on Dr Urban Urbanson
 SELECT
-	d.name,
-	h.name,
-	h.address,
-	d2.name,
+	d.name AS doctor_name,
+	h.name AS hospital_name,
+	h.address AS hospital_address,
+	d2.name AS department_name,
 FROM 	
 	staging.doctor d 
 LEFT JOIN staging.hospital_doctor hd ON d.doctor_id = hd.doctor_id
