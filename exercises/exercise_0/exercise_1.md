@@ -30,7 +30,7 @@
 
 **Intial naive conceptual ERD**
 
-<img src = "../assets/initial_conceptual_model_ex1.png"
+<img src = "../../assets/initial_conceptual_model_ex1.png"
 width=300> 
 
 **Initial tables**
