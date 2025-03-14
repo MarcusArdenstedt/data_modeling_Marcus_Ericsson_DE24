@@ -1,30 +1,39 @@
 Table Doctor {
-  doctor_id integer [primary key]
-  name varchar(50) [not null]
+  doctor_id SERIAL [primary key]
+  name varchar(20) [not null]
   doc_address varchar(50) [not null]
 }
 TABLE Department {
-  department_id integer [primary key]
-  name varchar(50) [not null]
+  department_id SERIAL [primary key]
+  name varchar(20) [not null]
 }
 
 Table Hospital {
-  hospital_id integer [primary key]
-  name varchar(50) [not null]
+  hospital_id SERIAL [primary key]
+  name varchar(20) [not null]
   address varchar(50) [not null]
 }
 
 Table HospitalDepartment {
   hospital_id integer [not null, ref: > Hospital.hospital_id]
   department_id integer [not null, ref: > Department.department_id]
+  indexes {
+    (department_id,hospital_id) [pk]
+  }
 }
 
 Table DepartmentDoctor {
   doctor_id integer [not null, ref: > Doctor.doctor_id]
   department_id integer [not null, ref: > Department.department_id]
+  indexes {
+    (department_id,doctor_id) [pk]
+  }
 }
 
 Table HospitalDoctor {
   hospital_id integer [not null, ref: > Hospital.hospital_id]
   doctor_id integer [not null, ref: > Doctor.doctor_id]
+  indexes {
+    (doctor_id,hospital_id) [pk]
+  }
 }

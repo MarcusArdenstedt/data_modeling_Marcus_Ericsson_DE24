@@ -5,7 +5,9 @@ VALUES
     (1, 1),
     (1, 2),
     (2, 3),
-    (2, 1);
+    (2, 1),
+    (3, 4),
+    (3, 3);
 
 
 -- Exercise 1 task a, Add a row in HospitalDepartment with a hospital_id that doesn't exist in the hospital table

@@ -5,7 +5,8 @@ VALUES
     ('Dr. Abra Abrahamson'),
     ('Dr. Erika Erikson'),
     ('Dr. Sven Svenson'),
-    ('Dr Urban Urbanson');
+    ('Dr Urban Urbanson'),
+    ('Dr Ragnar Wagner');
 
 
 

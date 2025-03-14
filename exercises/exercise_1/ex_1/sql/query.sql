@@ -44,7 +44,7 @@ SET search_path TO hospital_ex1_0;
 SELECT
     h.name AS hospital_name,
     de.name AS department_name,
-    d.name AS doctor_name
+    d.name AS doctor_name,
 FROM 
     Hospital h 
 INNER JOIN

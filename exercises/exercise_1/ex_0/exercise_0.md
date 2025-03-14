@@ -57,7 +57,7 @@ relationships
 - doctor_id (foreign key)
 
 
-<img src = "../../../assets/logical_model_hospital_erd_ex1_0.png" width=500>
+<img src = "../../../assets/hospital_logical_conceptual_erd.png" width=500>
 
 
 c)

@@ -4,4 +4,5 @@ INSERT INTO Department (name)
 VALUES
     ('kardiologi'),
     ('neurologi'),
-    ('ortopedi');
+    ('ortopedi'),
+    ('urology');
