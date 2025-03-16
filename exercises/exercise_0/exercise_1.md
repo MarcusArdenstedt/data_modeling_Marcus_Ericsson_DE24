@@ -65,7 +65,7 @@ Doctor
 Refined with bridge tables to reflect many-to-many
 relationships
 
-<img src = "../assets/conceptual_hospital_ex0_1.png"
+<img src = "../../assets/conceptual_hospital_ex0_1.png"
 width=500>
 
 ## composite entities
