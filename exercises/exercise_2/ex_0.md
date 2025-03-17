@@ -104,11 +104,16 @@ Order_Detail
 - Order(order_id, order_date, customer_id)
 
 d)
-A: we add price as an attribute tp product tabel. it works only if the price remains constants
+
+A: we add price as an attribute to product table. it works only if the price remains constants
 
 B: If price increase or decrease over time, solution A would not work, because historical orders would end up with wrong price. 
 
 C: Add price list entity that would keep track of hitorical prices.
+
+d)
+
+
 
 
 
