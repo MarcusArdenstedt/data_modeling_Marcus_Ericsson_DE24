@@ -116,11 +116,11 @@ A: we add price as an attribute to product table. it works only if the price rem
 
 B: If price increase or decrease over time, solution A would not work, because historical orders would end up with wrong price. 
 
-C: Add price list entity that would keep track of hitorical prices.
+C: Add price list entity that would keep track of historical prices.
 
-d)
 
-Added price attribute in product table and added in price_today, date in Order_Detil.
+
+Added price attribute in product table and added in price_today, date in Order_Detail table.
 
 ***Result***
 
@@ -147,4 +147,6 @@ Order_Detail
 - price_today
 - date
 
+
+e)
 
