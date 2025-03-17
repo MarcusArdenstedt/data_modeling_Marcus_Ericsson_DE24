@@ -99,9 +99,16 @@ Order_Detail
 
 ***Relationel schema notation*** 
 
-- Customer(customer_id, customer_name, customer_address)
-- Product(product_id, product_id)
-- Order(order_id, order_date, customer_id)
+- Customer(<u>customer_id</u>, customer_name, customer_address) 
+- Product(<u>product_id</u>, product_name, price)
+- Order(<u>order_id</u>, order_date, customer_id)
+- Order_detail(<u>order_id, product_id</u>, quantity, FK: order_id -> Order, FK: product_id -> Product)
+
+***Function dependency***
+- customer_id --> customer_name, customer_address 
+- product_id --> product_name, price
+- order_id --> order_date, customer_id
+- (order_id, product_id) --> quantity, price_today, date
 
 d)
 
@@ -113,7 +120,31 @@ C: Add price list entity that would keep track of hitorical prices.
 
 d)
 
+Added price attribute in product table and added in price_today, date in Order_Detil.
 
+***Result***
 
+Customer
+- customer_id (PK)
+- customer_name
+- address
+
+Order
+- order_id (PK)
+- order_date
+- customer_id (FK)
+
+Product
+- product_id (PK)
+- product_name
+- price
+
+Order_Detail
+- Composite primary key (order_id, product_id), (PK)
+- order_id (FK)
+- product_id (FK)
+- quantity
+- price_today
+- date
 
 
