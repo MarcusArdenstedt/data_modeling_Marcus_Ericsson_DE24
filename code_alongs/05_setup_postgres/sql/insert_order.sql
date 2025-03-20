@@ -1,5 +1,4 @@
-SET 
-    search_path TO ezecream_05;
+SET  search_path TO ezecream_05;
 
 TRUNCATE TABLE Orders RESTART IDENTITY;
 
@@ -13,4 +12,3 @@ VALUES
 
 -- Todo: for reader: find out how to delete this row with customer
 
-SELECT * FROM ezecream_05.Orders;

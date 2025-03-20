@@ -29,13 +29,13 @@ SELECT
     b.end_time
 FROM
     Attendee a
-INNER JOIN 
+LEFT JOIN 
     EventAttendee e ON a.attendee_id = e.attendee_id
-INNER JOIN
+LEFT JOIN
     Events ev ON e.event_id = ev.event_id
-INNER JOIN
+LEFT JOIN
     Booking b ON ev.event_id = b.event_id
-INNER JOIN
+LEFT JOIN
     Room r ON b.room_id = r.room_id
 WHERE
     a.name = 'Bob' OR a.name = 'Helen';
