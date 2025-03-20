@@ -1,0 +1,45 @@
+TABLE Orginazer {
+  orginazer_id SERIAL [primary key]
+  fist_name VARCHAR(50) [not null]
+  last_name VARCHAR(50) [not null]
+  phone char(12) [not null]
+}
+
+TABLE Booking {
+  booking_id SERIAL [primary key]
+  orginazer_id INTEGER [not null, unique]
+  event_id integer [not null, unique]
+  room_id integer [not null, unique]
+  date datetime [not null]
+  start_time INTEGER [not null]
+  end_time integer [not null]
+}
+REF: Booking.orginazer_id > Orginazer.orginazer_id
+REF: Booking.room_id > Room.room_id
+REF: Booking.event_id > Event.event_id
+
+TABLE Room {
+  room_id SERIAL [primary key]
+  letter Char(1) [not null]
+  number integer [not null]
+  capacity integer [not null]
+}
+
+Table Event {
+  event_id serial [primary key]
+  event_name varchar(100) [not null]
+}
+
+
+Table EventAttendee {
+  eventattendee_id SERIAL [primary key]
+  event_id integer [not null, unique]
+  attendee_id integer [not null, unique]
+}
+REF: EventAttendee.event_id > Event.event_id
+REF: EventAttendee.attendee_id > Attendee.attendee_id
+
+TABLE Attendee {
+  attendee_id SERIAL [primary key]
+  name varchar(50) [not null]
+}

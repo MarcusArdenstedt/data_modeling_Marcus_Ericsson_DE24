@@ -27,7 +27,7 @@ a)
 you will get redundancy data  in customer_name if one cutomer wants more product, same with product_name. It will create a probelm if you wanna delete a product, the hal raw will be deleted.
 
 1) data redundancy 
-Defination: same values repeded leads to across multiple rows. Problems, consistnacy increase s storage usage 
+Defination: same values repeded leads to across multiple rows. Problems, consistancy increase s storage usage 
 Example: look order 101: name + address repeated 3 times.
 
 2) deletion anomaly
@@ -39,7 +39,7 @@ Example: look order 101: name + address repeated 3 times.
 - Example: adding a new customer without chosen product and/or quantity.
 
 4) Update anomaly
-- Defination: updating modifying are value leads to incositencies with other rows. In other words one would have to update same info in sevral pklaces.
+- Defination: updating modifying are value leads to incositencies with other rows. In other words one would have to update same info in sevral places.
 - Example: If we need update name/address of a customer that is present in sevral rows, we would have to manually update it in each row linked to this customer or create  inconsistens data.
 
 b)
@@ -60,7 +60,7 @@ checklist 2NF
   just part of it.               (no)
 
 
-***question*** 
+***Question*** 
 
 1) Which column/columns are your primary key?
 2) Go through each column thats is NOT a part of PK?
