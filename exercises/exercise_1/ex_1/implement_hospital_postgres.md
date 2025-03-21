@@ -22,7 +22,7 @@ Get a error: relation "hospitaldepartment" does not exist.
 
 ***why?***
 
-Foreign key in HospitalDepartment is a constraint that creat
+Foreign key in HospitalDepartment is a constraint that create
 a relation with Hospital tables primary key, and it make sure
 that only valid value can store in attributes. 
 
@@ -44,7 +44,7 @@ everthing that is related to it.
 
 f)
 
-## violate domain contraint
+## violate domain constraint
 
 
 **Wrote more character that are allowed**
