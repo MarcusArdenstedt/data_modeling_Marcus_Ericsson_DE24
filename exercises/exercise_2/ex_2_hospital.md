@@ -41,7 +41,7 @@ a)
 ***Function dependency***
 - hospital_id --> name, address
 - doctor_id --> name
-- department --> name 
+- department_id --> name 
 
 b)
 
